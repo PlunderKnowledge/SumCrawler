@@ -13,7 +13,7 @@ val opRabbitVersion = "1.3.0"
 
 libraryDependencies ++= Seq(
   "org.scalikejdbc"  %% "scalikejdbc"           % "2.3.5",
-  "org.postgresql"   %  "postgresql"            % "9.4-1200-jdbc41",
+  "org.postgresql"   %  "postgresql"            % "9.3-1100-jdbc41",
   "ch.qos.logback"   %  "logback-classic"       % "1.1.3",
   "com.roundeights"  %% "hasher"                % "1.2.0",
   "com.spingo"       %% "op-rabbit-core"        % opRabbitVersion,
@@ -22,4 +22,12 @@ libraryDependencies ++= Seq(
   "com.spingo"       %% "op-rabbit-airbrake"    % opRabbitVersion,
   "com.spingo"       %% "op-rabbit-akka-stream" % opRabbitVersion
 )
+
+flywayDriver := "org.postgresql.Driver"
+
+flywayUrl := "jdbc:postgresql://localhost:5432/sumcrawler"
+
+flywayUser := "postgres"
+
+flywayPassword := "passw0rd"
 
