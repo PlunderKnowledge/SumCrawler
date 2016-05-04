@@ -19,19 +19,7 @@ object RabbitConsumer extends App {
       consume(topic(queue("sum-crawler-queue", durable = true), List("verifiable-files"))) {
         (body(as[VerifiableFile])) {
           file =>
-            val fileSum = Algo.md5.tap(Source.fromURL(file.fileUrl)).mkString
-            val sum = Source.fromURL(file.checksumUrl).mkString
-            if(fileSum == sum) {
-              DB localTx {
-                implicit session =>
-                  sql"""insert into successful values (${file.fileUrl}, ${file.checksumUrl}, NOW())""".update.apply()
-              }
-            } else {
-              DB localTx {
-                implicit session =>
-                  sql"""insert into failure values (${file.fileUrl}, ${file.checksumUrl}, NOW()))""".update.apply()
-              }
-            }
+            DB localTx { implicit session => file.verify }
             ack
         }
       }
