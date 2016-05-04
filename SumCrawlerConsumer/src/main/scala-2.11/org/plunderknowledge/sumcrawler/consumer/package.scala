@@ -2,9 +2,9 @@ package org.plunderknowledge.sumcrawler
 
 import java.io.File
 
-import akka.actor.{Props, ActorSystem}
+import akka.actor.{ActorSystem, Props}
 import com.spingo.op_rabbit.RabbitControl
-import com.typesafe.config.{ConfigFactory, Config}
+import com.typesafe.config.{Config, ConfigFactory}
 import org.plunderknowledge.sumcrawler.model.VerifiableFile
 import play.api.libs.json.Json
 import scalikejdbc.{AutoSession, ConnectionPool}

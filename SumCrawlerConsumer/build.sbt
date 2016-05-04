@@ -21,8 +21,11 @@ libraryDependencies ++= Seq(
   "com.spingo"       %% "op-rabbit-json4s"      % opRabbitVersion,
   "com.spingo"       %% "op-rabbit-airbrake"    % opRabbitVersion,
   "com.spingo"       %% "op-rabbit-akka-stream" % opRabbitVersion,
-  "com.jsuereth"     %  "gpg-library_2.10"      % "0.8.3"
+  "com.jsuereth"     %  "gpg-library_2.10"      % "0.8.3",
+  "org.specs2"       %% "specs2-core"           % "3.8" % "test"
 )
+
+scalacOptions in Test ++= Seq("-Yrangepos")
 
 flywayDriver := "org.postgresql.Driver"
 

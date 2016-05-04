@@ -13,7 +13,6 @@ import scala.io.Source
   * Created by greg on 4/30/16.
   */
 case class VerifiableFile(fileUrl: String, signature: String, signatureType: String, keyringUrl: Option[String]) {
-
   def verify()(implicit session: DBSession): Boolean = {
     VerifiableFile.signatureTypeMap(signatureType)(session)(this)
   }
