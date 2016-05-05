@@ -3,7 +3,6 @@
   <component name="ScalaSbtSettings">
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
-        <option name="createEmptyContentRootDirectories" value="true" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="jdk" value="1.8" />
         <option name="modules">
@@ -17,5 +16,7 @@
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
     </option>
+    <option name="maximumHeapSize" value="2048" />
+    <option name="vmParameters" value="-Xss512m -Xmx2G" />
   </component>
 </project>

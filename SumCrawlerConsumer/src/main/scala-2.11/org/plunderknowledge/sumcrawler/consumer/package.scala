@@ -7,6 +7,7 @@ import com.spingo.op_rabbit.RabbitControl
 import com.typesafe.config.{Config, ConfigFactory}
 import org.plunderknowledge.sumcrawler.model.VerifiableFile
 import play.api.libs.json.Json
+import scalikejdbc.config.DBsWithEnv
 import scalikejdbc.{AutoSession, ConnectionPool}
 
 /**
@@ -15,15 +16,5 @@ import scalikejdbc.{AutoSession, ConnectionPool}
 package object consumer {
 
   val config = ConfigFactory.parseFile(new File(this.getClass.getClassLoader.getResource("application.conf").getFile))
-
-  implicit val urlTupleFormat = Json.format[VerifiableFile]
-  implicit val actorSystem = ActorSystem("sum-crawler")
-  val rabbitControl = actorSystem.actorOf(Props[RabbitControl])
-
-  Class.forName("org.postgresql.Driver")
-  ConnectionPool.singleton(
-    config.getString("postgres.url"), config.getString("postgres.user"), config.getString("postgres.password"))
-
-  implicit val session = AutoSession
 
 }

@@ -4,6 +4,7 @@ import com.roundeights.hasher.Algo
 import com.spingo.op_rabbit.Subscription
 import com.spingo.op_rabbit.PlayJsonSupport._
 import org.plunderknowledge.sumcrawler.model.VerifiableFile
+import org.plunderknowledge.sumcrawler.context._
 import scalikejdbc._
 import scala.io.Source
 import scala.concurrent.ExecutionContext.Implicits.global
