@@ -26,16 +26,17 @@ libraryDependencies ++= Seq(
   "org.specs2"        %% "specs2-core"           % "3.8"     % "test",
   "org.scalikejdbc"   %% "scalikejdbc-test"      % "2.3.5"   % "test",
   "com.h2database"    %  "h2"                    % "1.4.191" % "test",
-  "ch.qos.logback"    %  "logback-classic"       % "1.1.3"   % "test"
+  "ch.qos.logback"    %  "logback-classic"       % "1.1.3"   % "test",
+  "org.flywaydb"      %  "flyway-core"           % "4.0"     % "test"
 )
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
-flywayDriver := "org.postgresql.Driver"
+flywayDriver in Runtime := "org.postgresql.Driver"
 
-flywayUrl := "jdbc:postgresql://localhost:5432/sumcrawler"
+flywayUrl in Runtime := "jdbc:postgresql://localhost:5432/sumcrawler"
 
-flywayUser := "postgres"
+flywayUser in Runtime := "postgres"
 
-flywayPassword := "passw0rd"
+flywayPassword in Runtime := "passw0rd"
 

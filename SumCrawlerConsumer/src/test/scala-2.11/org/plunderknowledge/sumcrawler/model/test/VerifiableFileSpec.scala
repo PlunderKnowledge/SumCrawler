@@ -12,6 +12,8 @@ import scalikejdbc._
 import scalikejdbc.config._
 import scalikejdbc.specs2.mutable.AutoRollback
 
+import org.flywaydb.core.Flyway
+
 
 trait AutoRollbackSumCrawler extends AutoRollback {
   override def db = NamedDB('verification).toDB
@@ -24,6 +26,9 @@ class VerifiableFileSpec extends Specification with BeforeAll {
 
   override def beforeAll(): Unit = {
     DBsWithEnv("test").setup('verification)
+    val flyway = new Flyway()
+    flyway.setDataSource(ConnectionPool.dataSource('verification))
+    flyway.migrate()
   }
 
   sequential
@@ -32,7 +37,7 @@ class VerifiableFileSpec extends Specification with BeforeAll {
     val verifiable = VerifiableFile(VerifiableFileSpec.correctFileUrl, VerifiableFileSpec.correctFileSum, "md5", None)
     verifiable.verify() must beTrue
     sql"""select count(*) as success_count from signature
-          where success = true""".map(rs => rs.int("success_count")).single.apply() must beEqualTo(1)
+          where success = true""".map(rs => rs.int("success_count")).single.apply() must beEqualTo(Some(1))
   }
 }
 

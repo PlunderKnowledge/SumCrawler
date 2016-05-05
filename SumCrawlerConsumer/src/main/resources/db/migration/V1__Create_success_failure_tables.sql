@@ -3,7 +3,7 @@ insert into signature_types values
   ('md5'),
   ('gpg');
 
-create table signatures(
+create table signature(
   id serial primary key,
   file_url text not null,
   signature text not null,
@@ -12,7 +12,7 @@ create table signatures(
   success bool not null
 );
 
-create table gpg_keyrings(
-  signature_id int primary key references signatures(id),
-  keyring text not null
+create table gpg_keyring(
+  signature_id int primary key references signature(id),
+  keyring text not null default ''
 )
