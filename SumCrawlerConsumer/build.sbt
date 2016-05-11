@@ -23,6 +23,9 @@ libraryDependencies ++= Seq(
   "com.spingo"        %% "op-rabbit-airbrake"    % opRabbitVersion,
   "com.spingo"        %% "op-rabbit-akka-stream" % opRabbitVersion,
   "com.jsuereth"      %  "gpg-library_2.10"      % "0.8.3",
+  "org.apache.ignite" %  "ignite-core"           % "1.5.0.final",
+  "org.apache.ignite" %  "ignite-spring"         % "1.5.0.final",
+  "org.apache.ignite" %  "ignite-scalar"         % "1.5.0.final",
   "org.specs2"        %% "specs2-core"           % "3.8"     % "test",
   "org.scalikejdbc"   %% "scalikejdbc-test"      % "2.3.5"   % "test",
   "com.h2database"    %  "h2"                    % "1.4.191" % "test",
@@ -32,11 +35,11 @@ libraryDependencies ++= Seq(
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
-flywayDriver in Runtime := "org.postgresql.Driver"
+flywayDriver := "org.postgresql.Driver"
 
-flywayUrl in Runtime := "jdbc:postgresql://localhost:5432/sumcrawler"
+flywayUrl := "jdbc:postgresql://localhost:5432/sumcrawler"
 
-flywayUser in Runtime := "postgres"
+flywayUser := "postgres"
 
-flywayPassword in Runtime := "passw0rd"
+flywayPassword := "passw0rd"
 

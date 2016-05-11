@@ -3,9 +3,11 @@ package org.plunderknowledge.sumcrawler.consumer
 import com.roundeights.hasher.Algo
 import com.spingo.op_rabbit.Subscription
 import com.spingo.op_rabbit.PlayJsonSupport._
+import org.apache.ignite.Ignite
 import org.plunderknowledge.sumcrawler.model.VerifiableFile
 import org.plunderknowledge.sumcrawler.context._
 import scalikejdbc._
+
 import scala.io.Source
 import scala.concurrent.ExecutionContext.Implicits.global
 
@@ -13,6 +15,8 @@ import scala.concurrent.ExecutionContext.Implicits.global
   * Created by greg on 4/30/16.
   */
 object RabbitConsumer extends App {
+
+  val igniteConfig = "ignite-config.xml"
 
   val subscriptionRef = Subscription.run(rabbitControl) {
     import com.spingo.op_rabbit.Directives._

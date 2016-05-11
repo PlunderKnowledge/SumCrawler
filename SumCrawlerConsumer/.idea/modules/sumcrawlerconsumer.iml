@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="sumcrawlerconsumer" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/../../ignite-type-metadata.xml</file>
+          <file>file://$MODULE_DIR$/../../ignite-config.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/../../target/scala-2.11/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.11/test-classes" />
@@ -21,82 +31,97 @@
       <excludeFolder url="file://$MODULE_DIR$/../../target/resolution-cache" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.11/src_managed/main" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/scala-2.11/src_managed/test" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/specs2-reports" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/test-reports" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: ch.qos.logback:logback-classic:1.1.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-config_2.11:2.3.5:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: com.h2database:h2:1.4.191:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-matcher_2.11:3.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-core_2.11:3.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-common_2.11:3.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-codata_2.11:3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.14:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc_2.11:2.3.5:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-interpolation_2.11:2.3.5:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-interpolation-macro_2.11:2.3.5:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-core_2.11:2.3.5:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scalaz:scalaz-effect_2.11:7.2.0:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scalaz:scalaz-core_2.11:7.2.0:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scalaz:scalaz-concurrent_2.11:7.2.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-stm:scala-stm_2.11:0.7:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.5:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scalap:2.11.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.11.7:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-compiler:2.11.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-actors:2.10.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.reactivestreams:reactive-streams:1.0.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.postgresql:postgresql:9.3-1100-jdbc41:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.json4s:json4s-core_2.11:3.2.11:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.json4s:json4s-ast_2.11:3.2.11:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.joda:joda-convert:1.8.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.bouncycastle:bcprov-jdk15on:1.49:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.bouncycastle:bcpg-jdk15on:1.49:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpcore:4.1.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpclient:4.1.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.apache.commons:commons-pool2:2.4.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.apache.commons:commons-dbcp2:2.1.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: net.databinder:dispatch-http_2.10:0.8.10:jar" level="project" />
-    <orderEntry type="library" name="SBT: net.databinder:dispatch-futures_2.10:0.8.10:jar" level="project" />
-    <orderEntry type="library" name="SBT: net.databinder:dispatch-core_2.10:0.8.10:jar" level="project" />
-    <orderEntry type="library" name="SBT: log4j:log4j:1.2.14:jar" level="project" />
-    <orderEntry type="library" name="SBT: joda-time:joda-time:2.9.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.airbrake:airbrake-java:2.2.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: commons-logging:commons-logging:1.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-json_2.11:2.4.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-iteratees_2.11:2.4.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-functional_2.11:2.4.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-datacommons_2.11:2.4.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-stream_2.11:2.4.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-actor_2.11:2.4.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe:ssl-config-core_2.11:0.1.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe:ssl-config-akka_2.11:0.1.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe:config:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.timcharper:acked-streams_2.11:2.1.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.thoughtworks.paranamer:paranamer:2.6:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.thenewmotion.akka:akka-rabbitmq_2.11:2.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-play-json_2.11:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-json4s_2.11:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-core_2.11:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-akka-stream_2.11:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-airbrake_2.11:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.roundeights:hasher_2.11:1.2.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.rabbitmq:amqp-client:3.4.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.jsuereth:gpg-library_2.10:0.8.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.5.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.5.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.5.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.5.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.5.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.chuusai:shapeless_2.11:2.2.5:jar" level="project" />
-    <orderEntry type="library" name="SBT: ch.qos.logback:logback-core:1.1.3:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: org.scalikejdbc:scalikejdbc-test_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.ignite:ignite-scalar:1.5.0.final:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.gridgain:ignite-shmem:1.0.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.ignite:ignite-core:1.5.0.final:jar" level="project" />
+    <orderEntry type="library" name="SBT: javax.cache:cache-api:1.0.0:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: org.flywaydb:flyway-core:4.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scalikejdbc:scalikejdbc-test_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: ch.qos.logback:logback-core:1.1.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.chuusai:shapeless_2.11:2.2.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.5.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.5.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.5.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.5.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.5.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.jsuereth:gpg-library_2.10:0.8.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.rabbitmq:amqp-client:3.4.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.roundeights:hasher_2.11:1.2.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-airbrake_2.11:1.3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-akka-stream_2.11:1.3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-core_2.11:1.3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-json4s_2.11:1.3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.spingo:op-rabbit-play-json_2.11:1.3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.thenewmotion.akka:akka-rabbitmq_2.11:2.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.thoughtworks.paranamer:paranamer:2.6:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.timcharper:acked-streams_2.11:2.1.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe:config:1.3.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe:ssl-config-akka_2.11:0.1.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe:ssl-config-core_2.11:0.1.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-actor_2.11:2.4.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.akka:akka-stream_2.11:2.4.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-datacommons_2.11:2.4.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-functional_2.11:2.4.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-iteratees_2.11:2.4.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-json_2.11:2.4.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: commons-logging:commons-logging:1.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.airbrake:airbrake-java:2.2.8:jar" level="project" />
+    <orderEntry type="library" name="SBT: joda-time:joda-time:2.9.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: log4j:log4j:1.2.14:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.databinder:dispatch-core_2.10:0.8.10:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.databinder:dispatch-futures_2.10:0.8.10:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.databinder:dispatch-http_2.10:0.8.10:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.commons:commons-dbcp2:2.1.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.commons:commons-pool2:2.4.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpclient:4.1.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.httpcomponents:httpcore:4.1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bouncycastle:bcpg-jdk15on:1.49:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.bouncycastle:bcprov-jdk15on:1.49:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.joda:joda-convert:1.8.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.json4s:json4s-ast_2.11:3.2.11:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.json4s:json4s-core_2.11:3.2.11:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.postgresql:postgresql:9.3-1100-jdbc41:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.reactivestreams:reactive-streams:1.0.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-actors:2.10.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-compiler:2.11.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.8:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.11.7:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scalap:2.11.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.1:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scala-lang.modules:scala-xml_2.11:1.0.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-stm:scala-stm_2.11:0.7:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scalaz:scalaz-concurrent_2.11:7.2.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scalaz:scalaz-core_2.11:7.2.0:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.scalaz:scalaz-effect_2.11:7.2.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-core_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-interpolation-macro_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-interpolation_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.14:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-codata_2.11:3.8:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-common_2.11:3.8:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-core_2.11:3.8:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: org.specs2:specs2-matcher_2.11:3.8:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: com.h2database:h2:1.4.191:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scalikejdbc:scalikejdbc-config_2.11:2.3.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: aopalliance:aopalliance:1.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.apache.ignite:ignite-spring:1.5.0.final:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-aop:4.1.0.RELEASE:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-beans:4.1.0.RELEASE:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-context:4.1.0.RELEASE:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-core:4.1.0.RELEASE:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-expression:4.1.0.RELEASE:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-jdbc:4.1.0.RELEASE:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.springframework:spring-tx:4.1.0.RELEASE:jar" level="project" />
   </component>
 </module>

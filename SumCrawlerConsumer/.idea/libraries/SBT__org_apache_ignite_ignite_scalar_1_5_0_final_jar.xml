@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.apache.ignite:ignite-scalar:1.5.0.final:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.ignite/ignite-scalar/jars/ignite-scalar-1.5.0.final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.ignite/ignite-scalar/srcs/ignite-scalar-1.5.0.final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
