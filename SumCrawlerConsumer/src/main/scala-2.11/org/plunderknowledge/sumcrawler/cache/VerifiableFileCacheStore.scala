@@ -5,7 +5,6 @@ import javax.cache.Cache.Entry
 import org.apache.ignite.cache.store.CacheStoreAdapter
 import org.plunderknowledge.sumcrawler.model.{GpgKeyRing, Signature, SignatureType}
 import scalikejdbc._
-import scalikejdbc.QueryDSLFeature
 import org.plunderknowledge.sumcrawler.context._
 import scalikejdbc.QueryDSL.{deleteFrom, insert, select}
 

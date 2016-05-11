@@ -87,7 +87,8 @@ object VerifiableFile {
     val fileSum = Stream.continually(fileStream.read).takeWhile(_ != -1).map(_.toByte).toArray.md5.hex
     val sum = verifiableFile.signature
     val isVerified = (fileSum == sum)
-    sql"""insert into signature values (DEFAULT, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), ${isVerified})""".update().apply()
+    sql"""insert into signature values
+          (DEFAULT, DEFAULT, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), ${isVerified})""".update().apply()
     isVerified
   }
   def verifyGpg(verifiableFile: VerifiableFile)(implicit session: DBSession): Boolean = {
@@ -96,12 +97,12 @@ object VerifiableFile {
       val sigStream = new ByteArrayInputStream(verifiableFile.signature.getBytes)
       val fileStream = new ByteArrayInputStream(Source.fromURL(verifiableFile.fileUrl).map(_.toByte).toArray)
       val isVerified = keyRing.verifySignatureStreams(fileStream, sigStream)
-      val id = sql"""insert into signature values (DEFAULT, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), ${isVerified})""".updateAndReturnGeneratedKey().apply()
-      sql"""insert into gpg_keyrings (file_url, signature, signature_type, checked_date, success) values (${id}, ${keyRingUrl})""".update().apply()
+      val id = sql"""insert into gpg_keyrings values (DEFAULT, ${keyRingUrl})""".update().apply()
+      sql"""insert into signature values (DEFAULT, $id, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), ${isVerified})""".updateAndReturnGeneratedKey().apply()
       isVerified
     }.getOrElse {
-      val id = sql"""insert into signature values (DEFAULT, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), false)""".updateAndReturnGeneratedKey().apply()
-      sql"""insert into gpg_keyrings values (${id}, DEFAULT)""".update().apply()
+      val id = sql"""insert into gpg_keyrings values (DEFAULT, DEFAULT)""".update().apply()
+      sql"""insert into signature values (DEFAULT, DEFAULT, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), false)""".updateAndReturnGeneratedKey().apply()
       false
     }
   }

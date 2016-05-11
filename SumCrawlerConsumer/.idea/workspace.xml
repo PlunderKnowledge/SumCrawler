@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cc34bcb-7966-448b-94da-603f3737523b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__aopalliance_aopalliance_1_0_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__javax_cache_cache_api_1_0_0_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_ignite_ignite_core_1_5_0_final_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_ignite_ignite_scalar_1_5_0_final_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_ignite_ignite_spring_1_5_0_final_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_gridgain_ignite_shmem_1_0_0_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_aop_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_beans_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_context_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_core_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_expression_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_jdbc_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_springframework_spring_tx_4_1_0_RELEASE_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/sumcrawlerconsumer.iml" afterPath="$PROJECT_DIR$/.idea/modules/sumcrawlerconsumer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_success_failure_tables.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_success_failure_tables.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/consumer/RabbitConsumer.scala" afterPath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/consumer/RabbitConsumer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala" afterPath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala" afterPath="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala" />
     </list>
     <ignored path="SumCrawlerConsumer.iws" />
@@ -101,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VerifiableFileCacheStore.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VerifiableFileCacheStore.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+            <state relative-caret-position="387">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding>
                 <element signature="e#47#77#0" expanded="true" />
               </folding>
@@ -113,18 +94,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VerifiableFile.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VerifiableFile.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
               <folding>
                 <element signature="e#47#97#0" expanded="true" />
-                <marker date="1462965478754" expanded="true" signature="3620:3769" placeholder="insert into signature... " />
-                <marker date="1462965478754" expanded="true" signature="4354:4503" placeholder="insert into signature... " />
-                <marker date="1462965478754" expanded="true" signature="4557:4672" placeholder="insert into gpg_keyrings... " />
-                <marker date="1462965478754" expanded="true" signature="4749:4890" placeholder="insert into signature... " />
-                <marker date="1462965478754" expanded="true" signature="4944:4992" placeholder="insert into gpg_keyrings... " />
+                <marker date="1463009066942" expanded="true" signature="3620:3788" placeholder="insert into signature... " />
+                <marker date="1463009066942" expanded="true" signature="4373:4429" placeholder="insert into gpg_keyrings... " />
+                <marker date="1463009066942" expanded="true" signature="4462:4616" placeholder="insert into signature... " />
+                <marker date="1463009066942" expanded="true" signature="4714:4764" placeholder="insert into gpg_keyrings... " />
+                <marker date="1463009066942" expanded="true" signature="4797:4947" placeholder="insert into signature... " />
               </folding>
             </state>
           </provider>
@@ -161,8 +142,8 @@
         <option value="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/consumer/RabbitConsumer.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_success_failure_tables.sql" />
-        <option value="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala" />
         <option value="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala" />
       </list>
     </option>
   </component>
@@ -1006,12 +987,12 @@
       <updated>1462453902418</updated>
       <workItem from="1462453977841" duration="1559000" />
       <workItem from="1462466231810" duration="16265000" />
-      <workItem from="1462501207646" duration="22425000" />
+      <workItem from="1462501207646" duration="24066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40249000" />
+    <option name="totallyTimeSpent" value="41890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1047" extended-state="6" />
@@ -1026,7 +1007,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1081,7 +1062,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala</url>
-          <line>90</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -1121,11 +1102,11 @@
           <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
           <folding>
             <element signature="e#47#97#0" expanded="true" />
-            <marker date="1462965478754" expanded="true" signature="3620:3769" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4354:4503" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4557:4672" placeholder="insert into gpg_keyrings... " />
-            <marker date="1462965478754" expanded="true" signature="4749:4890" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4944:4992" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="3620:3788" placeholder="insert into signature... " />
+            <marker date="1463009066942" expanded="true" signature="4373:4429" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="4462:4616" placeholder="insert into signature... " />
+            <marker date="1463009066942" expanded="true" signature="4714:4764" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="4797:4947" placeholder="insert into signature... " />
           </folding>
         </state>
       </provider>
@@ -1170,11 +1151,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#47#97#0" expanded="true" />
-            <marker date="1462965478754" expanded="true" signature="3620:3769" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4354:4503" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4557:4672" placeholder="insert into gpg_keyrings... " />
-            <marker date="1462965478754" expanded="true" signature="4749:4890" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4944:4992" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="3620:3788" placeholder="insert into signature... " />
+            <marker date="1463009066942" expanded="true" signature="4373:4429" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="4462:4616" placeholder="insert into signature... " />
+            <marker date="1463009066942" expanded="true" signature="4714:4764" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="4797:4947" placeholder="insert into signature... " />
           </folding>
         </state>
       </provider>
@@ -1424,6 +1405,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <element signature="e#47#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_success_failure_tables.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1443,24 +1434,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/model/VerifiableFile.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
           <folding>
             <element signature="e#47#97#0" expanded="true" />
-            <marker date="1462965478754" expanded="true" signature="3620:3769" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4354:4503" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4557:4672" placeholder="insert into gpg_keyrings... " />
-            <marker date="1462965478754" expanded="true" signature="4749:4890" placeholder="insert into signature... " />
-            <marker date="1462965478754" expanded="true" signature="4944:4992" placeholder="insert into gpg_keyrings... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala-2.11/org/plunderknowledge/sumcrawler/cache/VerifiableFileCacheStore.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-          <folding>
-            <element signature="e#47#77#0" expanded="true" />
+            <marker date="1463009066942" expanded="true" signature="3620:3788" placeholder="insert into signature... " />
+            <marker date="1463009066942" expanded="true" signature="4373:4429" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="4462:4616" placeholder="insert into signature... " />
+            <marker date="1463009066942" expanded="true" signature="4714:4764" placeholder="insert into gpg_keyrings... " />
+            <marker date="1463009066942" expanded="true" signature="4797:4947" placeholder="insert into signature... " />
           </folding>
         </state>
       </provider>
