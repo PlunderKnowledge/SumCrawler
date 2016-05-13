@@ -8,60 +8,11 @@ import com.roundeights.hasher.Implicits.{stringToHasher, _}
 import org.bouncycastle.openpgp.{PGPKeyRing, PGPPublicKeyRing, PGPSignature}
 import org.joda.time.DateTime
 import play.api.libs.json.Json
+import scalikejdbc.QueryDSL
 import scalikejdbc._
 
 import scala.io.Source
 
-case class GpgKeyRing(id: Long, keyring: String)
-object GpgKeyRing extends SQLSyntaxSupport[GpgKeyRing] {
-  override val tableName = "gpg_keyring"
-  def apply(keyringTypeNames: ResultName[GpgKeyRing])(rs: WrappedResultSet): GpgKeyRing = {
-    GpgKeyRing(id = rs.long(keyringTypeNames.id),
-      keyring = rs.string(keyringTypeNames.keyring))
-  }
-}
-
-case class SignatureType(signatureType: String)
-object SignatureType extends SQLSyntaxSupport[SignatureType] {
-  override val tableName = "signature_type"
-  def apply(signatureTypeNames: ResultName[SignatureType])(rs: WrappedResultSet): SignatureType = {
-    SignatureType(signatureType = rs.string(signatureTypeNames.signatureType))
-  }
-}
-
-case class Signature(id: Long,
-                     keyringId: Option[Long],
-                     fullUrl: String,
-                     signature: String,
-                     signatureType: SignatureType,
-                     signatureTypeId: String,
-                     checkedDate: DateTime,
-                     success: Boolean,
-                     keyring: Option[GpgKeyRing])
-object Signature extends SQLSyntaxSupport[Signature] {
-  override val tableName = "signature"
-  def apply(signatureSyntax: SyntaxProvider[Signature],
-            signatureType: SyntaxProvider[SignatureType])(rs: WrappedResultSet): Signature = {
-    apply(signatureSyntax.resultName, SignatureType(signatureType.resultName)(rs))(rs)
-  }
-  def apply(signatureNames: ResultName[Signature],
-            signatureType: SignatureType)(rs: WrappedResultSet): Signature = {
-    Signature(rs.long(signatureNames.id),
-      rs.longOpt(signatureNames.keyringId),
-      rs.string(signatureNames.fullUrl),
-      rs.string(signatureNames.signature),
-      signatureType,
-      rs.string(signatureNames.signatureTypeId),
-      rs.jodaDateTime(signatureNames.checkedDate),
-      rs.boolean(signatureNames.success),
-      None)
-  }
-  def apply(signatureSyntax: SyntaxProvider[Signature],
-            gpgKeyRingSyntax: SyntaxProvider[GpgKeyRing],
-            signatureTypeSyntax: SyntaxProvider[SignatureType])(rs: WrappedResultSet): Signature = {
-    apply(signatureSyntax, signatureTypeSyntax)(rs).copy(keyring = Some(GpgKeyRing(gpgKeyRingSyntax.resultName)(rs)))
-  }
-}
 
 /**
   * Created by greg on 4/30/16.
@@ -87,8 +38,15 @@ object VerifiableFile {
     val fileSum = Stream.continually(fileStream.read).takeWhile(_ != -1).map(_.toByte).toArray.md5.hex
     val sum = verifiableFile.signature
     val isVerified = (fileSum == sum)
-    sql"""insert into signature values
-          (DEFAULT, DEFAULT, ${verifiableFile.fileUrl}, ${verifiableFile.signature}, ${verifiableFile.signatureType}, NOW(), ${isVerified})""".update().apply()
+    val s = Signature.column
+    applyUpdate {
+      QueryDSL.insert.into(Signature).namedValues(
+        s.fileUrl -> verifiableFile.fileUrl,
+        s.signature -> verifiableFile.signature,
+        s.signatureType -> verifiableFile.signatureType,
+        s.checkedDate -> DateTime.now,
+        s.success -> isVerified)
+    }
     isVerified
   }
   def verifyGpg(verifiableFile: VerifiableFile)(implicit session: DBSession): Boolean = {

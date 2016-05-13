@@ -1,6 +1,5 @@
 package org.plunderknowledge.sumcrawler.model.test
 
-import com.roundeights.hasher.Algo
 import org.specs2.mutable.Specification
 import org.plunderknowledge.sumcrawler.model.VerifiableFile
 
@@ -15,25 +14,21 @@ import scalikejdbc.specs2.mutable.AutoRollback
 import org.flywaydb.core.Flyway
 
 
-trait AutoRollbackSumCrawler extends AutoRollback {
-  override def db = NamedDB('verification).toDB
-}
-
 /**
   * Created by greg on 5/4/16.
   */
 class VerifiableFileSpec extends Specification with BeforeAll {
 
   override def beforeAll(): Unit = {
-    DBsWithEnv("test").setup('verification)
+    DBsWithEnv("test").setupAll()
     val flyway = new Flyway()
-    flyway.setDataSource(ConnectionPool.dataSource('verification))
+    flyway.setDataSource(ConnectionPool.dataSource('default))
     flyway.migrate()
   }
 
   sequential
 
-  "Verifiable file should correctly identify correct sums" in new AutoRollbackSumCrawler {
+  "Verifiable file should correctly identify correct sums" in new AutoRollback {
     val verifiable = VerifiableFile(VerifiableFileSpec.correctFileUrl, VerifiableFileSpec.correctFileSum, "md5", None)
     verifiable.verify() must beTrue
     sql"""select count(*) as success_count from signature

@@ -32,17 +32,6 @@
     <bean abstract="true" id="ignite.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
         <!-- Set to true to enable distributed class loading for examples, default is false. -->
         <property name="peerClassLoadingEnabled" value="true"/>
-        <property name="cacheConfiguration">
-            <list>
-                <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="cacheStoreFactory" ref="sum-crawler-pojo-store-factory"/>
-                    <!-- Sets flag indicating whether read from database is enabled. -->
-                    <property name="readThrough" value="true"/>
-                    <!-- Sets flag indicating whether write to database is enabled. -->
-                    <property name="writeThrough" value="true"/>
-                </bean>
-            </list>
-        </property>
         <!-- Enable task execution events for examples. -->
         <property name="includeEventTypes">
             <list>

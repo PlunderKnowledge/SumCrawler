@@ -6,7 +6,7 @@ import org.apache.ignite.cache.store.CacheStoreAdapter
 import org.plunderknowledge.sumcrawler.model.{GpgKeyRing, Signature, SignatureType}
 import scalikejdbc._
 import org.plunderknowledge.sumcrawler.context._
-import scalikejdbc.QueryDSL.{deleteFrom, insert, select}
+import scalikejdbc.QueryDSL
 
 /**
   * Created by greg on 5/10/16.
@@ -14,7 +14,7 @@ import scalikejdbc.QueryDSL.{deleteFrom, insert, select}
 class SignatureCacheStore extends CacheStoreAdapter[Long, Signature] {
   override def delete(key: Any): Unit = {
     withSQL {
-      deleteFrom(Signature).where.eq(Signature.column.id, key)
+      QueryDSL.deleteFrom(Signature).where.eq(Signature.column.id, key)
     }.update.apply()
   }
 
@@ -22,20 +22,19 @@ class SignatureCacheStore extends CacheStoreAdapter[Long, Signature] {
     val m = Signature.column
     val n = GpgKeyRing.column
     val sig = entry.getValue
-    withSQL {
-      insert.into(Signature).namedValues(
+    applyUpdate {
+      QueryDSL.insert.into(Signature).namedValues(
         m.id -> entry.getKey,
-        m.fullUrl -> sig.fullUrl,
+        m.fileUrl -> sig.fileUrl,
         m.signature -> sig.signature,
-        m.signatureTypeId -> sig.signatureTypeId,
         m.checkedDate -> sig.checkedDate,
         m.success -> sig.success
       )
-    }.update.apply()
+    }
     sig.keyring.foreach {
       keyring =>
-        withSQL {
-          insert.into(GpgKeyRing).namedValues(n.keyring -> keyring.keyring)
+        applyUpdate {
+          QueryDSL.insert.into(GpgKeyRing).namedValues(n.keyring -> keyring.keyring)
         }
     }
   }
@@ -43,11 +42,11 @@ class SignatureCacheStore extends CacheStoreAdapter[Long, Signature] {
   override def load(key: Long): Signature = {
     val (s, st, k) = (Signature.syntax("s"), SignatureType.syntax("st"), GpgKeyRing.syntax("k"))
     val sig = withSQL {
-      select.from(Signature as s).
-        leftJoin(GpgKeyRing as k).on(s.keyringId, k.id).
-        innerJoin(SignatureType as st).on(s.signatureTypeId, st.signatureType).
+      QueryDSL.select.from(Signature as s).
+        leftJoin(GpgKeyRing as k).on(s.column("keyringId"), k.id).
+        innerJoin(SignatureType as st).on(s.signatureType, st.signatureType).
         where.eq(s.id, key)
-    }.map(Signature(s, k, st) _).single.apply()
+    }.map(rs => Signature(s)(rs)).single.apply()
     sig.getOrElse {
       throw new Exception("signature not found")
     }
